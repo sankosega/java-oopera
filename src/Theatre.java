@@ -3,12 +3,13 @@ public class Theatre {
     public static void main(String[] args) {
 
         // Актеры
-        Actor actor1 = new Actor("Иван", "Петров", 1.85);
-        Actor actor2 = new Actor("Мария", "Сидорова", 1.70);
-        Actor actor3 = new Actor("Алексей", "Козлов", 1.78);
+        Actor actor1 = new Actor("Иван", "Петров", Gender.MALE, 1.85);
+        Actor actor2 = new Actor("Мария", "Сидорова", Gender.FEMALE, 1.70);
+        Actor actor3 = new Actor("Алексей", "Козлов", Gender.MALE, 1.78);
 
         // Режиссеры
-        Director dir1 = new Director("Антон", "Чехов");
+        Director dir1 = new Director("Антон", "Чехов", Gender.MALE,5);
+        Director dir2 = new Director("Константин", "Станиславский", Gender.MALE,  12);
 
         // Автор музыки и Хореограф
         String musicAuthor = "Петр Чайковский";
@@ -52,7 +53,7 @@ public class Theatre {
 
         // 5. Замена актёра
         System.out.println("Замена актера");
-        Actor newActor = new Actor("Ольга", "Смирнова", 1.75);
+        Actor newActor = new Actor("Ольга", "Смирнова", Gender.FEMALE, 1.75);
         // Заменяем Петрова в "Кармен" на Смирнову
         carmen.replaceActor(newActor, "Петров");
         carmen.printActorsList();

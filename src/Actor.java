@@ -1,8 +1,8 @@
 public class Actor extends Person {
     private double height; // Рост в метрах
 
-    public Actor(String firstName, String lastName, double height) {
-        super(firstName, lastName);
+    public Actor(String firstName, String lastName, Gender gender, double height) {
+        super(firstName, lastName, gender);
         this.height = height;
     }
 
